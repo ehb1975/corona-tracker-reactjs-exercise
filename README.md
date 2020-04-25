@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## libs installed
+
+npm install --save axios react-chartjs-2 react-countup classnames<br/>
+npm install --save @material-ui/core<br/>
+npm install --save chart.js
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
