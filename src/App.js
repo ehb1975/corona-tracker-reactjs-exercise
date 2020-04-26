@@ -16,20 +16,17 @@ class App extends React.Component {
     }
 
     handleCountryChange = async (country) => {
-        console.log(country);
-        //TODO
-        //https://www.youtube.com/watch?v=khJlrj3Y6Ls - 1h:34
-        //https://www.npmjs.com/package/react-csv-reader
-        //https://github.com/owid/covid-19-data/blob/master/public/data/ecdc/full_data.csv
+        const fetchedData = await fetchData(country);
+        this.setState({ data: fetchedData, country: country });
     }
 
     render(){
-        const { data } = this.state;
+        const { data, country } = this.state;
         return(
             <div className={styles.container}> 
                 <Cards data={data} />
                 <CountryPicker handleCountryChange={this.handleCountryChange} />
-                <Charts />
+                <Charts country={country} />
             </div>
         )
     }

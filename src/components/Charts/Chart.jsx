@@ -11,18 +11,19 @@ import styles from './Chart.module.css'
         dailyData = {}
     }
 */
-const Charts = () => {
+const Charts = ({ country }) => {
+
     const [dailyData, setDailyData] = useState({});
     useEffect(() => {
         const fetchApi = async () => {
-            setDailyData(await fetchDailyData())
+            setDailyData(await fetchDailyData(country))
         }; 
 
         fetchApi();
-    });
+    }, [country]);
     
     const lineChartGlobal = (
-        dailyData.length
+        dailyData && dailyData.length
         ? (
             <Line 
                 data={{

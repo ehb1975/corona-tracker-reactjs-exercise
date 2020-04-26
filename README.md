@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 npm install --save axios react-chartjs-2 react-countup classnames<br/>
 npm install --save @material-ui/core<br/>
-npm install --save chart.js
-
+npm install --save chart.js<br/>
+npm install --save react-papaparse
 
 
 ## Available Scripts
